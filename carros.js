@@ -24,3 +24,15 @@ function moverCarro() {
     xCarro2 -= velocidadeCarro2;
     xCarro3 -= velocidadeCarro3;
 }
+
+function retornarCarro() {
+    if (xCarro < -120) {
+        xCarro = 600;
+    }
+    if (xCarro2 < -120) {
+        xCarro2 = 600;
+    }
+    if (xCarro3 < -120) {
+        xCarro3 = 600;
+    }
+}

@@ -8,4 +8,5 @@ function draw(){
   moverGato();
   mostrarCarro();
   moverCarro();
+  retornarCarro();
 }
