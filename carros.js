@@ -1,38 +1,27 @@
-// carro 1
-let xCarro = 600;
-let yCarro = 40;
-let velocidadeCarro1 = 3;
-
-//carro 2
-let xCarro2 = 600;
-let yCarro2 = 96;
-let velocidadeCarro2 = 3.5;
-
-//carro 3
-let xCarro3 = 600;
-let yCarro3 = 150;
-let velocidadeCarro3 = 5;
+let xCarros = [600, 600, 600]
+let yCarros = [40, 96, 150]
+let velocidadeCarros = [3, 3.5, 5]
 
 function mostrarCarro() {
-    image(imagemCarroVerde, xCarro, yCarro, 70, 40);
-    image(imagemCarroPreto, xCarro2, yCarro2, 70, 40);
-    image(imagemCarroAmarelo, xCarro3, yCarro3, 70, 40);
+    image(imagemCarroVerde, xCarros[0], yCarros[0], 70, 40);
+    image(imagemCarroPreto, xCarros[1], yCarros[1], 70, 40);
+    image(imagemCarroAmarelo, xCarros[2], yCarros[2], 70, 40);
 }
 
 function moverCarro() {
-    xCarro -= velocidadeCarro1;
-    xCarro2 -= velocidadeCarro2;
-    xCarro3 -= velocidadeCarro3;
+    xCarros[0] -= velocidadeCarros[0];
+    xCarros[1] -= velocidadeCarros[1];
+    xCarros[2] -= velocidadeCarros[2];
 }
 
 function retornarCarro() {
-    if (xCarro < -120) {
-        xCarro = 600;
+    if (xCarros[0] < -120) {
+        xCarros[0] = 600;
     }
-    if (xCarro2 < -120) {
-        xCarro2 = 600;
+    if (xCarros[1] < -120) {
+        xCarros[1] = 600;
     }
-    if (xCarro3 < -120) {
-        xCarro3 = 600;
+    if (xCarros[2] < -120) {
+        xCarros[2] = 600;
     }
 }
