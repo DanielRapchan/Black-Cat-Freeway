@@ -10,4 +10,6 @@ function draw() {
   moverCarro();
   retornarCarro();
   colisaoGatoCarro();
+  incluiPontos();
+  marcaPontos();
 }
