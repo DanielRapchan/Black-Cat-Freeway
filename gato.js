@@ -13,7 +13,9 @@ function moverGato() {
     }
 
     if (keyIsDown(83)) {
-        yGato += 3;
+        if (gatoNaoSaiDaTela()) {
+            yGato += 3;
+        }
     }
 }
 
@@ -27,6 +29,7 @@ function colisaoGatoCarro() {
         colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xGato, yGato, 15);
         if (colisao) {
             gatoPosicaoInicial();
+            perdePontos();
         }
     }
 }
@@ -43,4 +46,14 @@ function marcaPontos() {
         meusPontos += 1;
         gatoPosicaoInicial();
     }
+}
+
+function perdePontos() {
+    if (colisao && meusPontos > 0) {
+        meusPontos -= 1;
+    }
+}
+
+function gatoNaoSaiDaTela() {
+    return yGato < 366;
 }
