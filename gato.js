@@ -28,6 +28,7 @@ function colisaoGatoCarro() {
     for (let i = 0; i < imagemCarros.length; i++) {
         colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xGato, yGato, 15);
         if (colisao) {
+            somColisao.play();
             gatoPosicaoInicial();
             perdePontos();
         }
@@ -44,6 +45,7 @@ function incluiPontos() {
 function marcaPontos() {
     if (yGato < 10) {
         meusPontos += 1;
+        somPontos.play();
         gatoPosicaoInicial();
     }
 }
